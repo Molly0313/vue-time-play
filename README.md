@@ -1,18 +1,20 @@
 # vue-time-play
 基于vue的时间播放器组件
 
-> A Vue.js project
->
- ##使用
+##使用
 
-1、npm install vue-play-time --save
+1、
+ ```
+npm install vue-play-time --save
 //main.js中引入
 import vuePlayTime from 'vue-play-time'
 Vue.use(vuePlayTime);
-
+ ```
 2、
+ ```
 <vue-time-play :options="options" @onAnimate="onAnimate" @onClickEnd=“onClick”></vue-time-play>
-
+  ```
+ ```
 options = {
     speedConfig: {
       "慢": 5000,
@@ -25,7 +27,7 @@ options = {
     timeUnitControl: true,
     timeUnit: '天'
 }
-
+ ```
  **options参数说明**
 
 | param           | option   | type     |description                                     |
@@ -38,5 +40,7 @@ options = {
 | timeUnitControl | optional | boolean  | 是否显示时/天切换控件                              |
 
 onAnimate：时间轴动画每次结束的回调，回调参数是当前时间
+
 onClickEnd：点击时间轴的回调，回调参数是当前时间
+
 onClickUnit：切换天/小时的回调，回调参数hour或day
